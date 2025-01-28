@@ -14,6 +14,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
 
   after(async () => {
     if (!session?.user?.id) return;
+    console.log(session?.user?.id);
 
     const user = await db
       .select()
